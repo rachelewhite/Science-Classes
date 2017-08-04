@@ -1,0 +1,1763 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta name='generator' content='ExamView HTML Generator 1.0.5'>
+	<meta name='robots' content='noindex,nofollow'>
+	<title>LAB SAFETY QUIZ</title>
+	<style type='text/css'>
+		.spacer { line-height:.7em; }
+		.title { font-size:13pt; font-weight:bold; font-family:"Times New Roman", "Times", serif; color:#000000; }
+		.qnumber { font-size:12pt; font-family:"Times New Roman", "Times", serif; color:#000000; text-align:right; }
+		.choice { font-size:12pt; font-family:"Times New Roman", "Times", serif; color:#000000; }
+		.default { font-size:12pt; font-family:"Times New Roman", "Times", serif; color:#000000; }
+		.qinfo { font-size:12pt; font-family:"Times New Roman", "Times", serif; color:#000000; }
+		.points { font-size:8pt; font-family:"Times New Roman", "Times", serif; color:#000000; }
+		TD.pad { padding: 0pt 4pt 0pt 4pt; }
+		.font1 { font-family:"Times New Roman", "Times", serif; }
+		.font2 { font-family:"Times New Roman", "Times", serif; }
+		.font3 { font-family:"Verdana"; }
+		.font4 { font-family:"Times New Roman", "Times", serif; }
+	</style>
+<script type='text/javascript' language='JavaScript1.1'>
+<!--
+	// Copyright (c) 2000-2008 eInstruction Corp.
+	var listMap = '11111111111111111111111111111111111111111';
+	var qtypeMap = '00000000008888888888888888888888888888888';
+	var ansMap = new Array(41);
+	var ptsMap = new Array(41);
+	ansMap[0] = '47';
+	ptsMap[0] = 1;
+	ansMap[1] = '56';
+	ptsMap[1] = 1;
+	ansMap[2] = '57';
+	ptsMap[2] = 1;
+	ansMap[3] = '42';
+	ptsMap[3] = 1;
+	ansMap[4] = '51';
+	ptsMap[4] = 1;
+	ansMap[5] = '40';
+	ptsMap[5] = 1;
+	ansMap[6] = '53';
+	ptsMap[6] = 1;
+	ansMap[7] = '4e';
+	ptsMap[7] = 1;
+	ansMap[8] = '5d';
+	ptsMap[8] = 1;
+	ansMap[9] = '4c';
+	ptsMap[9] = 1;
+	ansMap[10] = '4a';
+	ptsMap[10] = 1;
+	ansMap[11] = '4b';
+	ptsMap[11] = 1;
+	ansMap[12] = '4f';
+	ptsMap[12] = 1;
+	ansMap[13] = '4a';
+	ptsMap[13] = 1;
+	ansMap[14] = '49';
+	ptsMap[14] = 1;
+	ansMap[15] = '55';
+	ptsMap[15] = 1;
+	ansMap[16] = '52';
+	ptsMap[16] = 1;
+	ansMap[17] = '57';
+	ptsMap[17] = 1;
+	ansMap[18] = '52';
+	ptsMap[18] = 1;
+	ansMap[19] = '52';
+	ptsMap[19] = 1;
+	ansMap[20] = '56';
+	ptsMap[20] = 1;
+	ansMap[21] = '54';
+	ptsMap[21] = 1;
+	ansMap[22] = '53';
+	ptsMap[22] = 1;
+	ansMap[23] = '5f';
+	ptsMap[23] = 1;
+	ansMap[24] = '51';
+	ptsMap[24] = 1;
+	ansMap[25] = '4b';
+	ptsMap[25] = 1;
+	ansMap[26] = '41';
+	ptsMap[26] = 1;
+	ansMap[27] = '50';
+	ptsMap[27] = 1;
+	ansMap[28] = '4b';
+	ptsMap[28] = 1;
+	ansMap[29] = '4d';
+	ptsMap[29] = 1;
+	ansMap[30] = '47';
+	ptsMap[30] = 1;
+	ansMap[31] = '4c';
+	ptsMap[31] = 1;
+	ansMap[32] = '49';
+	ptsMap[32] = 1;
+	ansMap[33] = '53';
+	ptsMap[33] = 1;
+	ansMap[34] = '5d';
+	ptsMap[34] = 1;
+	ansMap[35] = '4b';
+	ptsMap[35] = 1;
+	ansMap[36] = '4c';
+	ptsMap[36] = 1;
+	ansMap[37] = '53';
+	ptsMap[37] = 1;
+	ansMap[38] = '41';
+	ptsMap[38] = 1;
+	ansMap[39] = '5c';
+	ptsMap[39] = 1;
+	ansMap[40] = '58';
+	ptsMap[40] = 1;
+	function HandleSubmit(f)
+	{
+		var	MAGIC = 840;
+		var	totalCorrect = 0;
+		var	totalPossible = 0;
+		var	numCorrect = 0;
+		var	numPossible = 0;
+		var	numBlank = 0;
+		var	index;
+		var	msg;
+		var	i;
+
+		f.student_name.value = StripSpaces(f.student_name.value);
+		f.student_id.value = StripSpaces(f.student_id.value);
+		f.student_email.value = StripSpaces(f.student_email.value);
+
+		FixMR(f);
+		FixMTF(f);
+		index = 0;
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf(":") > 0) {
+				if (listMap.charAt(index) == "1") {
+					listIndex = f.elements[i].selectedIndex;
+					text = StripSpaces(f.elements[i].options[listIndex].value);
+				} else {
+					f.elements[i].value = StripSpaces(f.elements[i].value);
+					text = f.elements[i].value;
+				}
+
+				if (text.length == 0)
+					++numBlank;
+				++index;
+			}
+		}
+
+		if (f.student_name.value == "") {
+			alert("Student name cannot be blank.");
+			return(false);
+		}
+
+		if (numBlank > 0) {
+			if (numBlank == 1)
+				msg = "1 question";
+			else
+				msg = numBlank + " questions";
+			if (!confirm("You have not answered " + msg +
+				"  Are you sure you want to end the test?"))
+				return(false);
+		}
+
+		index = 0;
+		var scoreDetails = new Array();
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf(":") > 0) {
+				if (listMap.charAt(index) == "1") {
+					listIndex = f.elements[i].selectedIndex;
+					text = f.elements[i].options[listIndex].value;
+				} else
+					text = f.elements[i].value;
+
+				numPossible = ptsMap[index] * MAGIC;
+				if (ansMap[index] == "")
+					scoreDetails[index] = "?--";
+				else {
+					var scoreResult = ScoreAnswer(index, text, numPossible);
+					numCorrect = scoreResult.numPoints;
+					scoreDetails[index] = (scoreResult.isCorrect) ? " " : "X";
+					scoreDetails[index] += (Math.round(numCorrect * 100 / MAGIC) / 100).toString();
+					totalCorrect += numCorrect;
+					totalPossible += numPossible;
+				}
+
+				scoreDetails[index] += "/" + (numPossible / MAGIC);
+				++index;
+			}
+		}
+
+		f.score_details.value = scoreDetails.join("|");
+		f.score_correct.value = Math.round(totalCorrect * 100 / MAGIC) / 100;
+		f.score_possible.value = Math.round(totalPossible * 100 / MAGIC) / 100;
+		if (totalPossible > 0)
+			f.score_percent.value = Math.round(100.0 * totalCorrect / totalPossible);
+		else
+			f.score_percent.value = 0;
+
+		return(true);
+	}
+
+	function TranslateAnswer(s, answerIndex)
+	{
+		var	value;
+		var	newString;
+		var	code;
+		var	i;
+
+		value = (answerIndex % 31) + 1;
+		newString = "";
+		for (i=0; i < s.length; i += 2) {
+			code = parseInt(s.substring(i, i + 2), 16);
+			newString += String.fromCharCode(code ^ value);
+		}
+
+		return(newString);
+	}
+
+	function ScoreAnswer(answerIndex, responseText, pointsPossible)
+	{
+		var answerText = TranslateAnswer(ansMap[answerIndex], answerIndex);
+		var qtype = qtypeMap.charAt(answerIndex);
+		var nrExactMatch = false;
+		var result = new Array();
+
+		result.numPoints = 0;
+		result.isCorrect = false;
+
+		if (qtype == "3" && answerText.substring(0, 2) == "p:") {
+			answerText = answerText.substr(2);
+			if (responseText.toUpperCase() == answerText.toUpperCase())
+				result.isCorrect = true;
+			else
+				result.numPoints = MultiResponseCompare(responseText, answerText, pointsPossible);
+		} else if (qtype == "6") {
+			if (answerText.substring(0, 2) == "==") {
+				answerText = answerText.substr(2);
+				nrExactMatch = true;
+			}
+			if (NumericCompare(responseText, answerText, nrExactMatch))
+				result.isCorrect = true;
+		} else if (qtype == "7") {
+			if (CompletionCompare(responseText, answerText))
+				result.isCorrect = true;
+		} else if (responseText.toUpperCase() == answerText.toUpperCase())
+			result.isCorrect = true;
+
+		if (result.isCorrect)
+			result.numPoints = pointsPossible;
+
+		return(result);
+	}
+
+	function StripSpaces(s)
+	{
+		var	len;
+		var	i;
+
+		len = s.length;
+		for (i=len - 1; i >= 0 && s.charAt(i) == " "; --i)
+			len = i;
+
+		if (len == 0)
+			s = "";
+		else if (len != s.length)
+			s = s.substring(0, len);
+
+		return(s);
+	}
+
+	function MultiResponseCompare(responseText, answerText, pointsPossible)
+	{
+	}
+
+	function NumericCompare(response, answer, exactMatch)
+	{
+	}
+
+
+	function CompletionCompare(responseText, answerText)
+	{
+		return(false);
+	}
+
+	function FixMTF(f)
+	{
+	}
+
+	function FixMR(f)
+	{
+	}
+
+	function AllowReset()
+	{
+		return(window.confirm("Do you want to clear all of your answers?"));
+	}
+
+	function Restart()
+	{
+		if (AllowReset()) {
+			document.TestForm.onreset = function() { };
+			document.TestForm.reset();
+			document.TestForm.onreset = function() { AllowReset(); };
+		}
+	}
+// -->
+</script>
+</head>
+<body onResize='if(document.layers && navigator.appVersion.indexOf("Win") < 0){history.go(0);}'
+bgcolor='#FFFFFF' style='background-image:url(lab_safety_quiz_files/header.gif); background-repeat:no-repeat'>
+<noscript>
+	<h3><font color='#FF0000'>Javascript not enabled</font></h3>
+</noscript>
+<script type='text/javascript' language='JavaScript'>
+<!--
+if (navigator.appName.indexOf("Netscape") >= 0) {
+	if (parseInt(navigator.appVersion.charAt(0)) < 4)
+		alert("This document requires Netscape Navigator version 4.0 or later.");
+} else if (navigator.appName.indexOf("Explorer") >= 0) {
+	if (parseInt(navigator.appVersion.charAt(0)) < 4)
+		alert("This document requires Internet Explorer version 4.0 or later.");
+}
+// -->
+</script>
+<form name='TestForm' action='http://score.examview.com/cgi-bin/results.cgi' method='POST'
+	onSubmit='return(HandleSubmit(this))' onReset='return(AllowReset())'>
+<input type='hidden' name='product_version' value='6.2.1'>
+<input type='hidden' name='instructor_name' value='Ms. White'>
+<input type='hidden' name='instructor_formalname' value='Ms. White'>
+<input type='hidden' name='instructor_email' value='rwhite@acs.ac'>
+<input type='hidden' name='instructor_org' value='CHS'>
+<input type='hidden' name='instructor_city' value='Clinton'>
+<input type='hidden' name='instructor_state' value='TN'>
+<input type='hidden' name='test_name' value='LAB SAFETY QUIZ'>
+<input type='hidden' name='other_label' value='Other'>
+<input type='hidden' name='test_mixed_questions' value='0'>
+<input type='hidden' name='score_correct' value='0'>
+<input type='hidden' name='score_possible' value='0'>
+<input type='hidden' name='score_percent' value='0'>
+<input type='hidden' name='score_subjective' value='0'>
+<input type='hidden' name='score_details' value=''>
+<input type='hidden' name='score_showresults' value='1'>
+<div class='spacer'>&nbsp;</div>
+<div class='default'>
+	<div style='margin-left:1em'>
+	<b>Name:</b>&nbsp;<input type='text' name='student_name' size='30'> &nbsp;&nbsp;
+	<b>ID:</b>&nbsp;<input type='text' name='student_id' size='12'><br>
+	<div class='spacer'>&nbsp;</div>
+	<b>Email:</b>&nbsp;<input type='text' name='student_email' size='45'><br><br>
+	</div>
+</div>
+<div class='title'>LAB SAFETY QUIZ</div>
+
+<table align='left' width='100%' border='0' cellpadding='0' cellspacing='0'>
+<tr valign='top'>
+	<td colspan='3'><br>
+<div class='default'><b>True/False</b><span style='font-size:10pt'><br></span><i>Indicate whether the
+sentence or statement is true or false.</i></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:1' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;1.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'><span style='font-size:12pt'>If glassware is broken, sweep up immediately and
+put broken glass in the trash can.</span></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:2' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;2.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>Work only on activities assigned by your teacher.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:3' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;3.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'><span style='font-size:12pt'>All accidents and/or injuries must be reported to
+the teacher immediately</span></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:4' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;4.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>If you find a beaker with an unknown substance that is clear, smell to see if
+there are any vapors.&nbsp; If there are no vapors it is probably water.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:5' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;5.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'><span style='font-size:12pt'>If a student pours acid into a beaker and it
+splashes into their eyes, the student should inform the teacher and immediately flush their eyes with
+the eye wash.</span></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:6' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;6.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>You may eat and drink in the lab.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:7' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;7.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>Read all instructions before you begin a laboratory or field activity.&nbsp; Ask
+questions if you do not understand any part of the activity.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:8' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;8.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>If you wear glasses or contact lens, your are not required to wear safety
+goggles if the lab instructs you to do so.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:9' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;9.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>Tie back long hair and loose clothing to keep them away from flames and
+equipment.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='TF:10' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;10.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<div class='default'>Since we will be working in the lab, horseplay will be tolerated.</div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='top'>
+	<td colspan='3'><br>
+<div class='default'><b>Matching</b></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='top'>
+	<td></td>
+	<td></td>
+	<td>
+<div class='spacer'>&nbsp;</div>
+<div class='default'><b>Safety Symbols&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></div><div
+class='default'><table cellpadding='0' cellspacing='0' width='95%' border='0'><tr
+valign='baseline'><td width='4%'><div class='choice'>a.</div></td><td width='46%'><span
+class='default'><span style='font-size:8pt'><img width='43' height='43' align='bottom'
+alt="grp001-1.jpg" src="lab_safety_quiz_files/grp001-1.jpg" border='0'></span> Safety
+Goggles<br></span></td><td width='4%'><div class='choice'>e.</div></td><td width='46%'><span
+class='default'><img width='58' height='56' align='bottom' alt="grp001-5.jpg"
+src="lab_safety_quiz_files/grp001-5.jpg" border='0'> Disposal</span></td></tr><tr
+valign='baseline'><td><div class='choice'>b.</div></td><td><span class='default'><span
+style='font-size:8pt'><img width='49' height='52' align='bottom' alt="grp001-2.jpg"
+src="lab_safety_quiz_files/grp001-2.jpg" border='0'></span> Laboratory Apron</span></td><td><div
+class='choice'>f.</div></td><td><span class='default'><span style='font-size:8pt'><img width='57'
+height='51' align='bottom' alt="grp001-6.jpg" src="lab_safety_quiz_files/grp001-6.jpg"
+border='0'></span> Flames</span></td></tr><tr valign='baseline'><td><div
+class='choice'>c.</div></td><td><span class='default'><span style='font-size:8pt'><img width='57'
+height='52' align='bottom' alt="grp001-3.jpg" src="lab_safety_quiz_files/grp001-3.jpg"
+border='0'></span> Corrosive Chemical </span></td><td><div class='choice'>g.</div></td><td><span
+class='default'><img width='57' height='57' align='bottom' alt="grp001-7.jpg"
+src="lab_safety_quiz_files/grp001-7.jpg" border='0'>Sharp Object</span></td></tr><tr
+valign='baseline'><td><div class='choice'>d.</div></td><td><span class='default'><span
+style='font-size:8pt'><img width='52' height='45' align='bottom' alt="grp001-4.jpg"
+src="lab_safety_quiz_files/grp001-4.jpg" border='0'></span> Hand
+washing</span></td></tr></table></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:11' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;11.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Always wear ______ to protect your eyes in any activity involving chemicals,
+flames, or heating, or the possibility of broken glassware.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:12' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;12.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Always direct a sharp edge or point away from yourself and others.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:13' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;13.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Wear a ______ to protect your skin and clothing.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:14' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;14.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Use soap and warm water.&nbsp; Lather both sides or your hands and between
+fingers.&nbsp; Rinse well.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:15' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;15.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Tie back loose hair and clothing.&nbsp; Follow instructions from yor teacher
+about lighting and extinguishing flames.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:16' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;16.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Chemicals and other used materials must be disposed of safely.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:17' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;17.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'>Avoid getting acids or other harmful chemicals on your skin or clothing, or in
+your eyes.&nbsp; Do not inhale the vapors.</span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='top'>
+	<td></td>
+	<td></td>
+	<td>
+<div class='spacer'>&nbsp;</div>
+<div class='default'><b>Lab Equipment</b><br></div><div class='default'><table cellpadding='0'
+cellspacing='0' width='95%' border='0'><tr valign='baseline'><td width='4%'><div
+class='choice'>a.</div></td><td width='46%'><span class='default'>Graduated Cylinder</span></td><td
+width='4%'><div class='choice'>n.</div></td><td width='46%'><span
+class='default'>Thermometer</span></td></tr><tr valign='baseline'><td><div
+class='choice'>b.</div></td><td><span class='default'>Test Tube Holder</span></td><td><div
+class='choice'>o.</div></td><td><span class='default'>Scalpel</span></td></tr><tr
+valign='baseline'><td><div class='choice'>c.</div></td><td><span class='default'>Erlenmeyer
+Flask</span></td><td><div class='choice'>p.</div></td><td><span class='default'>Test
+Tube</span></td></tr><tr valign='baseline'><td><div class='choice'>d.</div></td><td><span
+class='default'>Test Tube Rack</span></td><td><div class='choice'>q.</div></td><td><span
+class='default'>Cork</span></td></tr><tr valign='baseline'><td><div
+class='choice'>e.</div></td><td><span class='default'>Safety Goggles</span></td><td><div
+class='choice'>r.</div></td><td><span class='default'>Hand Lens</span></td></tr><tr
+valign='baseline'><td><div class='choice'>f.</div></td><td><span
+class='default'>Beaker</span></td><td><div class='choice'>s.</div></td><td><span
+class='default'>Mortar &amp; Pestle</span></td></tr><tr valign='baseline'><td><div
+class='choice'>g.</div></td><td><span class='default'>Test Tube Brush</span></td><td><div
+class='choice'>t.</div></td><td><span class='default'>Bunsen Burner</span></td></tr><tr
+valign='baseline'><td><div class='choice'>h.</div></td><td><span class='default'>Triple Beam
+Balance</span></td><td><div class='choice'>u.</div></td><td><span class='default'>Watch
+Glass</span></td></tr><tr valign='baseline'><td><div class='choice'>i.</div></td><td><span
+class='default'>Spring Scale</span></td><td><div class='choice'>v.</div></td><td><span
+class='default'>Funnel</span></td></tr><tr valign='baseline'><td><div
+class='choice'>j.</div></td><td><span class='default'>Ring Stand</span></td><td><div
+class='choice'>w.</div></td><td><span class='default'>Oven</span></td></tr><tr
+valign='baseline'><td><div class='choice'>k.</div></td><td><span
+class='default'>Forceps</span></td><td><div class='choice'>x.</div></td><td><span
+class='default'>Petri Dish</span></td></tr><tr valign='baseline'><td><div
+class='choice'>l.</div></td><td><span class='default'>Glass Stirring Rod</span></td><td><div
+class='choice'>y.</div></td><td><span class='default'>Pipet</span></td></tr><tr
+valign='baseline'><td><div class='choice'>m.</div></td><td><span class='default'>Hot
+Plate</span></td><td><div class='choice'>z.</div></td><td><span class='default'>Rubber
+Stopper</span></td></tr></table></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:18' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;18.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='143' height='142' align='bottom' alt="ma018-1.jpg"
+src="lab_safety_quiz_files/ma018-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:19' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;19.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='154' height='154' align='bottom' alt="ma019-1.jpg"
+src="lab_safety_quiz_files/ma019-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:20' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;20.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><span class='font3'><span style='font-size:9pt'><span
+style='color:#444444'><img width='131' height='102' align='bottom' alt="ma020-1.jpg"
+src="lab_safety_quiz_files/ma020-1.jpg" border='0'></span></span></span></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:21' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;21.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><span class='font3'><span style='font-size:9pt'><span
+style='color:#444444'><img width='134' height='103' align='bottom' alt="ma021-1.jpg"
+src="lab_safety_quiz_files/ma021-1.jpg" border='0'></span></span></span></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:22' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;22.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='147' height='147' align='bottom' alt="ma022-1.jpg"
+src="lab_safety_quiz_files/ma022-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:23' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;23.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='156' height='156' align='bottom' alt="ma023-1.jpg"
+src="lab_safety_quiz_files/ma023-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:24' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;24.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='152' height='150' align='bottom' alt="ma024-1.jpg"
+src="lab_safety_quiz_files/ma024-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:25' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;25.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='168' height='168' align='bottom' alt="ma025-1.jpg"
+src="lab_safety_quiz_files/ma025-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:26' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;26.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='130' height='129' align='bottom' alt="ma026-1.jpg"
+src="lab_safety_quiz_files/ma026-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:27' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;27.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='120' height='120' align='bottom' alt="ma027-1.jpg"
+src="lab_safety_quiz_files/ma027-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:28' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;28.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='94' height='141' align='bottom' alt="ma028-1.jpg"
+src="lab_safety_quiz_files/ma028-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:29' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;29.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='119' height='119' align='bottom' alt="ma029-1.jpg"
+src="lab_safety_quiz_files/ma029-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:30' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;30.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='96' height='99' align='bottom' alt="ma030-1.jpg"
+src="lab_safety_quiz_files/ma030-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:31' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;31.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='125' height='125' align='bottom' alt="ma031-1.jpg"
+src="lab_safety_quiz_files/ma031-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:32' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;32.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='138' height='138' align='bottom' alt="ma032-1.jpg"
+src="lab_safety_quiz_files/ma032-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:33' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;33.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='101' height='101' align='bottom' alt="ma033-1.jpg"
+src="lab_safety_quiz_files/ma033-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:34' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;34.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><span class='font3'><span style='font-size:9pt'><span
+style='color:#444444'><img width='117' height='91' align='bottom' alt="ma034-1.jpg"
+src="lab_safety_quiz_files/ma034-1.jpg" border='0'></span></span></span></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:35' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;35.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='122' height='122' align='bottom' alt="ma035-1.jpg"
+src="lab_safety_quiz_files/ma035-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:36' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;36.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='62' height='109' align='bottom' alt="ma036-1.jpg"
+src="lab_safety_quiz_files/ma036-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:37' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;37.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='128' height='149' align='bottom' alt="ma037-1.jpg"
+src="lab_safety_quiz_files/ma037-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:38' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;38.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='91' height='139' align='bottom' alt="ma038-1.jpg"
+src="lab_safety_quiz_files/ma038-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:39' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;39.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='87' height='87' align='bottom' alt="ma039-1.jpg"
+src="lab_safety_quiz_files/ma039-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:40' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;40.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='100' height='68' align='bottom' alt="ma040-1.jpg"
+src="lab_safety_quiz_files/ma040-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<tr valign='baseline'>
+	<td>
+		<select name='MA:41' align='top' onmousewheel='return(false);'>
+			<option value=' '> 
+			<option value='A'>A
+			<option value='B'>B
+			<option value='C'>C
+			<option value='D'>D
+			<option value='E'>E
+			<option value='F'>F
+			<option value='G'>G
+			<option value='H'>H
+			<option value='I'>I
+			<option value='J'>J
+			<option value='K'>K
+			<option value='L'>L
+			<option value='M'>M
+			<option value='N'>N
+			<option value='O'>O
+			<option value='P'>P
+			<option value='Q'>Q
+			<option value='R'>R
+			<option value='S'>S
+			<option value='T'>T
+			<option value='U'>U
+			<option value='V'>V
+			<option value='W'>W
+			<option value='X'>X
+			<option value='Y'>Y
+			<option value='Z'>Z
+		</select>
+	</td>
+	<td>
+		<p class='qnumber'>&nbsp;41.&nbsp;</p>
+	</td>
+	<td width='100%'>
+<span class='default'><img width='104' height='104' align='bottom' alt="ma041-1.jpg"
+src="lab_safety_quiz_files/ma041-1.jpg" border='0'></span>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+</table>
+<br clear='all'>
+<br>
+<br>
+<table align='left' width='100%' cellpadding='0' cellspacing='0' border='0'>
+<tr>
+    <td bgcolor='#000000'>
+    <div style='font-size:1pt'>&nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td><input type='image' src='lab_safety_quiz_files/submit.gif' alt='Grade and Submit'>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href='#' onclick='Restart(); return false'><img
+	    src='lab_safety_quiz_files/restart.gif' border='0' alt='Start Over'></a>
+    </td>
+</tr>
+</table>
+</form>
+</body>
+</html>
