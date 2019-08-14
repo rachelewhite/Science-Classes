@@ -27,6 +27,7 @@
 * [ch_1-3_practice_test_physics_f11](ch_1-3_practice_test_physics_f11.248215823.htm)
 * [ch_2-3_practice_test_physical_science_f11](ch_2-3_practice_test_physical_science_f11.26264710.htm)
 * [ch_2_hw_motion](ch_2_hw_motion.26862440.htm)
+* [ch_2_hw_motion_2019](ch._2_hw_motion_2019.htm)
 * [ch_3_hw_acceleration](ch_3_hw_acceleration.26862901.htm)
 * [ch_3_practice_test](ch_3_practice_test.5162300.htm)
 * [ch_4-5_practice_test](ch_4-5_practice_test.72224048.htm)
